@@ -1,0 +1,20 @@
+{
+  "name": "forum",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.1.x",
+    "jade": "*",
+    "socket.io": "*",
+    "pg": "2.x",
+    "request": "",
+    "passport": "",
+    "passport-twitter": "",
+    "passport-facebook": "",
+    "passport-google" : "*"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+
+  }
+}

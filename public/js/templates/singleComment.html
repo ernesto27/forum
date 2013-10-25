@@ -1,0 +1,17 @@
+
+    <a class="pull-left" href="#">
+      <img src="<%= avatar %>" style="width: 64px; height: 64px;">
+    </a>
+    <div class="media-body">
+      <div class="pull-right wrap-deletecomment" style="display:none"><a href="" style="font-size:0.9em"> Delete </a></div>
+      <h4 class="media-heading"><%= username %></h4>
+      <%= comment %>
+
+      <div class="date-question" style="margin-top: 10px;">
+      	<% if(typeof(created) != 'undefined') { %>
+      		<%= moment(created, "YYYY-MM-DDTHH:mm:ss Z").fromNow() %>
+      	<% }else { %>
+      		Hace instantes
+      	<% } %>
+      </div>
+    </div>

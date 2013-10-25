@@ -1,0 +1,79 @@
+doctype 5
+html
+	head
+		title Forum
+		link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css")
+		link(rel="stylesheet", href="/css/styles.css")
+		style
+			#wrap-questions li{
+				height: 70px;
+			}
+				#wrap-questions .btn-group{
+					margin-top: 10px;
+				}
+
+				.date-question{
+					color: grey;
+					font-size: 0.8em;
+				}
+
+			#single-question #body-question{
+				padding: 4px;
+				margin-top: 20px;
+				width: 70%;
+			}	
+
+	body
+		nav.navbar.navbar-inverse.navbar-fixed-top(role="navigation")
+			.collapse.navbar-collapse.container 
+				ul.nav.navbar-nav
+					li
+						a(href="/#") Home
+					- if (!logged)
+						li
+							a(href="/login/twitter") Login twitter
+						li
+							a(href="/login/facebook") Login facebook
+						li
+							a(href="/login/google") Login Google
+					- else
+						li
+							a(href="#addquestion") Add question
+						li
+							a(href="/logout") Logout
+						li(style="margin-top: -8px", id="user-info")
+							a(href="/#home")
+								img(src="#{avatar}", style="width:32px;height:32px; margin-right: 8px;")
+								span#username #{username}
+								span.badge(style="margin-left: 10px;background: #CE0000;") 100
+
+		.container(style="border:solid 1px #ddd; margin-top: 70px",id="main-wrapper")
+
+			
+					
+			
+		
+		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+		script(src="http://underscorejs.org/underscore-min.js")
+		script(src="http://backbonejs.org/backbone-min.js")	
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.2.1/moment.min.js")
+		script(src="/socket.io/socket.io.js")
+		
+
+		script(src="js/helpers.js")
+		script(src="js/socketio.js")
+		script(src="js/models/questions.js")
+		script(src="js/models/comments.js")
+		script(src="js/collections/questions.js")
+		script(src="js/collections/comments.js")
+		script(src="js/collections/tags.js")
+		script(src="js/views/questions.js")
+		script(src="js/views/users.js")
+		script(src="js/views/comments.js")
+		script(src="js/views/tags.js")
+		script(src="js/router.js")
+		script(src="js/main.js")
+
+
+	
+			

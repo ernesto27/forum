@@ -1,0 +1,17 @@
+
+<div id="wrap-edit-questions">
+  <h2> Edit question </h2>
+  <h4 class="alert alert-danger" id="feedback-error" style="display:none"> </h4>
+  <h4 class="alert alert-success" id="feedback-add" style="display:none" > Edit success</h4>
+  <form action="" method="post" role="form" style="width:60%">
+      <div class="form-group">
+        <label>Title	</label>
+        <input type="text" value="<%= title %>" data-id="<%= id %>" name="title" id="title-edit" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Content</label>
+        <textarea rows="3" id="content-edit" class="form-control form-control"><%= body %></textarea>
+      </div>
+      <input type="button" value="Edit" id="edit-question-button" class="btn btn-primary">
+  </form>
+</div>

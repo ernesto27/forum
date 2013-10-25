@@ -1,0 +1,10 @@
+<a href="#question/<%= id %>"><%= title %></a> 
+	<div class="pull-right date-question"> <%= moment(created, "YYYY-MM-DDTHH:mm:ss Z").fromNow() %> 
+		<% if(typeof(username) != 'undefined') {%>
+			by <a href=""> <%= username %></a></div>
+		<% } %>
+ 	<div class="btn-group btn-group-xs" style="display:block">
+	<button type="button" class="btn btn-primary"> Votes <%= votes %></button>
+	</div>
+
+
